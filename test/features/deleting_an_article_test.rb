@@ -3,11 +3,6 @@ require 'test_helper'
 feature 'Deleting an article' do
   scenario 'article is clicked for delete' do
     # Given an article
-    # article = Article.create(
-    #                           title: 'An Aardvark Article',
-    #                           body: 'Too many aardvarks'
-    #                         )
-
     visit articles_path(articles(:aardvark))
 
     # When I click destroy

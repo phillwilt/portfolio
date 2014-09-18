@@ -3,12 +3,8 @@ require 'test_helper'
 feature 'Editing an article' do
   scenario 'when I edit an article' do
     # Given a form to edit an article
-    # article = Article.create(
-    #                           title: 'An Aardvark Article',
-    #                           body: 'Too many aardvarks'
-    #                         )
-
     visit article_path(articles(:aardvark))
+
     # When I submit the edit
     click_on 'Edit'
     fill_in 'Body', with: articles(:ant).body
