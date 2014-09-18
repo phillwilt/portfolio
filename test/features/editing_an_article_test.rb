@@ -3,19 +3,19 @@ require 'test_helper'
 feature 'Editing an article' do
   scenario 'when I edit an article' do
     # Given a form to edit an article
-    article = Article.create(
-                              title: 'An Aardvark Article',
-                              body: 'Too many aardvarks'
-                            )
+    # article = Article.create(
+    #                           title: 'An Aardvark Article',
+    #                           body: 'Too many aardvarks'
+    #                         )
 
-    visit article_path(article)
+    visit article_path(articles(:aardvark))
     # When I submit the edit
     click_on 'Edit'
-    fill_in 'Body', with: 'Too few ants'
+    fill_in 'Body', with: articles(:ant).body
     click_on 'Update Article'
 
     # Then I want to update and view the article
     page.text.must_include 'Article was successfully updated'
-    page.text.must_include 'Too few ants'
+    page.text.must_include articles(:ant).body
   end
 end

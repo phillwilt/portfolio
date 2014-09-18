@@ -5,15 +5,15 @@ feature 'Creating an article' do
     # Given I have created an article about aardvarks
     visit new_article_path
 
-    fill_in 'Title', with: 'An aardvark article'
-    fill_in 'Body', with: 'Too many aardvarks'
+    fill_in 'Title', with: articles(:aardvark).title
+    fill_in 'Body', with: articles(:aardvark).body
 
     # When I submit the aardvark article
     click_on 'Create Article'
 
     # Then the aardvark article will be created and displayed
     page.text.must_include 'Article was successfully created'
-    page.text.must_include 'Too many aardvarks'
+    page.text.must_include articles(:aardvark).body
 
   end
 end
