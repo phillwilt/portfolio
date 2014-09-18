@@ -8,7 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jbuilder', '~> 2.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem "minitest-rails"
+gem 'minitest-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
@@ -34,6 +34,7 @@ group :development do
 end
 
 group :test do
-  gem "minitest-rails-capybara"
+  gem 'minitest-rails-capybara'
+  # gem 'turn'
 end
 
