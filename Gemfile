@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-# styles and structure for bourbon
-gem 'bitters'
-# sass mixins
-gem 'bourbon'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -12,21 +8,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jbuilder', '~> 2.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'minitest-rails'
 
-# grid framework for bourbon
-gem 'neat'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
-# patterns for bourbon
-gem 'refills'
-
-# linting
-gem 'rubocop'
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
 # Turbolinks makes following links in your web application faster.
 # Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -37,17 +22,31 @@ gem 'uglifier', '>= 1.3.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do
+  # styles and structure for bourbon
+  gem 'bitters'
+  # sass mixins
+  gem 'bourbon'
+
+  # grid framework for bourbon
+  gem 'neat'
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
+  # patterns for bourbon
+  gem 'refills'
+
+  # Use SCSS for stylesheets
+  gem 'sass-rails', '~> 4.0.3'
+  gem 'spring'
   gem 'sqlite3'
   gem 'rails_layout'
-  gem 'spring'
-
 end
 
 group :test do
   gem 'minitest-rails-capybara'
   # gem 'turn'
+  # linting
+  gem 'rubocop'
+  gem 'minitest-rails'
 end
 
 group :production do
