@@ -9,6 +9,6 @@ feature 'Visiting the Article Index' do
     visit articles_path
 
     # Then the existing articles should show
-    page.text.must_include articles(:aardvark).body
+    page.text.must_include Article.first.body
   end
 end
