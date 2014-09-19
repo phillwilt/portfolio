@@ -25,8 +25,6 @@ gem 'refills'
 # linting
 gem 'rubocop'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Turbolinks makes following links in your web application faster.
@@ -41,6 +39,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 group :development do
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
+  gem 'sqlite3'
   gem 'rails_layout'
   gem 'spring'
 
@@ -49,4 +48,10 @@ end
 group :test do
   gem 'minitest-rails-capybara'
   # gem 'turn'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'thin'
 end
