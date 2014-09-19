@@ -29,13 +29,12 @@ gem 'rails', '4.1.6'
 gem 'turbolinks'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-  # Use SCSS for stylesheets
-  gem 'sass-rails', '~> 4.0.3'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.3'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do
-
   gem 'spring'
   gem 'sqlite3'
   gem 'rails_layout'
