@@ -1,0 +1,57 @@
+/*
+Syntax error: File to import not found or unreadable: bourbon.
+              Load paths:
+                /Users/pmw/workspace/portfolio/app/assets
+                /Users/pmw/workspace/portfolio/app/assets/stylesheets
+        on line 15 of stylesheets/application.css.scss
+
+10:  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+11:  * file per style scope.
+12:  *
+13:  *= require_self
+14:  *\/
+15: @import "bourbon";
+16: @import "base/grid-settings";
+17: @import "neat";
+18: @import "base/base";
+19: @import "refills/navigation"
+
+Backtrace:
+stylesheets/application.css.scss:15
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/import_node.rb:45:in `import'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/tree/root_node.rb:20:in `render'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/engine.rb:315:in `_render'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/engine.rb:262:in `render'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/lib/sass/plugin/compiler.rb:283:in `block in watch'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
+/Users/pmw/.rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.2.19/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: bourbon.\A               Load paths:\A                 /Users/pmw/workspace/portfolio/app/assets\A                 /Users/pmw/workspace/portfolio/app/assets/stylesheets\A         on line 15 of stylesheets/application.css.scss\A \A 10:  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new\A 11:  * file per style scope.\A 12:  *\A 13:  *= require_self\A 14:  */\A 15: @import \"bourbon\";\A 16: @import \"base/grid-settings\";\A 17: @import \"neat\";\A 18: @import \"base/base\";\A 19: @import \"refills/navigation\""; }

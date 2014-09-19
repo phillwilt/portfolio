@@ -1,4 +1,5 @@
 header.navigation {
+  @include outer-container;
   $navigation-padding: 1rem;
   $navigation-background: $seafoam-green;
   $navigation-color: transparentize(white, 0.3);
@@ -21,7 +22,7 @@ header.navigation {
   z-index: 999;
 
   .menu-wrapper {
-    @include outer-container;
+    @include span-columns(12);
     @include clearfix;
     position: relative;
     z-index: 9999;
@@ -180,7 +181,7 @@ header.navigation {
 
   .navigation-tools {
     @include clearfix;
-    display: block;
+    // display: block;
     padding-right: $navigation-padding;
     padding-left: $navigation-padding;
     clear: both;
@@ -234,7 +235,7 @@ header.navigation {
     }
 
     @include media($horizontal-bar-mode) {
-      width: 16em;
+      width: 16rem;
       position: relative;
       display: inline-block;
 
