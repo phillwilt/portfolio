@@ -11,8 +11,16 @@
   <body>
     <%= render 'refills/navigation' %>
     <main role="main">
-      <%= render 'layouts/messages' %>
+
+     <div id="content">
       <%= yield %>
+
+      </div>
+      <div id="content1">
+        <%= render 'layouts/messages' %>
+      </div>
+    </div>
+
     </main>
   </body>
 </html>

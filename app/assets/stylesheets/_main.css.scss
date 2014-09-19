@@ -2,3 +2,13 @@
 header {
 
 }
+
+main {
+  @include outer-container;
+  @include row;
+
+  div#content {
+    @include span-columns(12);
+  }
+}
+
