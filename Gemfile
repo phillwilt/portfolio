@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# styles and structure for bourbon
+gem 'bitters'
+# sass mixins
+gem 'bourbon'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -9,9 +13,16 @@ gem 'jbuilder', '~> 2.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'minitest-rails'
+
+# grid framework for bourbon
+gem 'neat'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
+# patterns for bourbon
+gem 'refills'
+
+# linting
 gem 'rubocop'
 
 # Use sqlite3 as the database for Active Record
@@ -30,6 +41,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 group :development do
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
+  gem 'rails_layout'
   gem 'spring'
 
 end
