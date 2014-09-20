@@ -22,7 +22,6 @@ class ArticlesController < ApplicationController
   end
 
   # POST /articles
-  # POST /articles.json
   def create
     @article = Article.new(article_params)
 
@@ -31,20 +30,13 @@ class ArticlesController < ApplicationController
         format.html do
           redirect_to @article, notice: 'Article was successfully created.'
         end
-        format.json do
-          render :show, status: :created, location: @article
-        end
       else
         format.html { render :new }
-        format.json do
-          render json: @article.errors, status: :unprocessable_entity
-        end
       end
     end
   end
 
   # PATCH/PUT /articles/1
-  # PATCH/PUT /articles/1.json
   def update
     respond_to do |format|
       if @article.update(article_params)
@@ -54,22 +46,17 @@ class ArticlesController < ApplicationController
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit }
-        format.json do
-          render json: @article.errors, status: :unprocessable_entity
-        end
       end
     end
   end
 
   # DELETE /articles/1
-  # DELETE /articles/1.json
   def destroy
     @article.destroy
     respond_to do |format|
       format.html do
         redirect_to articles_url, notice: 'Article was successfully destroyed.'
       end
-      format.json { head :no_content }
     end
   end
 
