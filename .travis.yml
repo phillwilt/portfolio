@@ -1,7 +1,7 @@
 deploy:
   provider: heroku
   api_key:
-    secure: MBLHOsyFE+udLVILoYO2npmVRSaeYGJ7vx7v2s/60CdXQ5WNjdyc9aoH127xs844d/tPydGU4UXVSzo7JYJ9KDlQ/3zfHl0e+4/ROsrUGp3piY3O/+KOAniEW+UfmQQKJ8jauCRwMbHpctLClB0sM19qPtpWIMeT/3Oo5jS5voE=
+    secure: TLG4AJRoWD6MmZucQdOKmCyyDJcTIBsIsdPnrQ/DH6yblVpqF1Qy0+2Lir+cEQldoun2u9ShalED5JNqKeOeqSNRFcW41RDPrPVUut9r14B0C+JndYuk4UVD+18LCn6MjW9BQUmxI4H82NO9FjceDpv85VuGSCk+8+APV0+WYcA=
   app: philwilt
   on:
     repo: phillwilt/portfolio
