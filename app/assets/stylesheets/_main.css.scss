@@ -1,14 +1,76 @@
 // _main.css.scss
+
+html {
+  min-height: 100%;
+  $visual-grid: true;
+}
+
+#background {
+  @include background(url("dock.jpg") no-repeat);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-height: auto;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.5;
+  filter:alpha(opacity=50);
+  z-index: -9999;
+}
+
 header {
 
 }
 
 main {
   @include outer-container;
-  @include row;
 
-  div#content {
+  #content {
     @include span-columns(12);
+
+    @include media($medium-screen-up) {
+      @include span-columns(10 of 12);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(9 of 12);
+    }
+  }
+
+  #branding {
+    @include span-columns(12);
+
+    @include media($medium-screen-up) {
+      @include span-columns(2 of 12);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(3 of 12);
+    }
+  }
+}
+
+#my-face {
+  @include border-top-radius(50%);
+  @include border-bottom-radius(50%);
+  @include border-left-radius(50%);
+  @include border-right-radius(50%);
+
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+#social-links {
+  @include media($medium-screen-up) {
+  }
+
+  .social-link {
+
+    svg {
+      fill: $dark-gray;
+    }
   }
 }
 
