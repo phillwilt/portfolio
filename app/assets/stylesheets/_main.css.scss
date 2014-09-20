@@ -2,11 +2,10 @@
 
 html {
   min-height: 100%;
-  $visual-grid: true;
 }
 
 #background {
-  @include background(url("dock.jpg") no-repeat);
+  @include background(image-url('dock.jpg') no-repeat);
   position: fixed;
   top: 0;
   left: 0;
