@@ -9,16 +9,25 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+
+    <div id="background"></div>
+
     <%= render 'refills/navigation' %>
+
     <main role="main">
 
-     <div id="content">
-      <%= yield %>
+      <div id="content">
+
+        <%= render 'layouts/messages' %>
+        <%= yield %>
 
       </div>
-      <div id="content1">
-        <%= render 'layouts/messages' %>
+
+      <div id="branding">
+        <%= image_tag 'me.jpg', alt: 'me', id: 'my-face'%>
+        <%= render 'layouts/social' %>
       </div>
+
     </div>
 
     </main>
