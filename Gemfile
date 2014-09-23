@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 # styles and structure for bourbon
 gem 'bitters'
 # sass mixins
@@ -25,7 +26,7 @@ gem 'jquery-rails'
 gem 'rails', '4.1.6'
 
 #CI integration
-gem 'travis'
+# gem 'travis'
 
 # Turbolinks makes following links in your web application faster.
 # Read more: https://github.com/rails/turbolinks
@@ -38,9 +39,11 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'rails_layout'
   gem 'spring'
   gem 'sqlite3'
-  gem 'rails_layout'
 end
 
 group :test do
