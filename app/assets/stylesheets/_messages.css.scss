@@ -1,0 +1,24 @@
+%flash-ext {
+  @include border-top-radius(0.5rem);
+  @include border-bottom-radius(0.5rem);
+  @include border-left-radius(0.5rem);
+  @include border-right-radius(0.5rem);
+}
+
+.flash-notice {
+  @extend %flash-notice;
+  @extend %flash-ext;
+}
+
+.flash-error {
+  @extend %flash-error;
+  @extend %flash-ext;
+  border-radius: .5rem;
+}
+
+.flash-success {
+  @extend %flash-success;
+  @extend %flash-ext;
+  border-radius: .5rem;
+}
+

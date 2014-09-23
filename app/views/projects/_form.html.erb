@@ -1,0 +1,21 @@
+<%= form_for(@project) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <br />
+    <%= f.text_field :name %>
+    <%= @project.errors[:name] %>
+  </div>
+
+  <div class="field">
+    <%= f.label :technologies %>
+    <br />
+    <%= f.text_field :technologies %>
+    <%= @project.errors[:technologies] %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

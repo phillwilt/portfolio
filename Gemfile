@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # styles and structure for bourbon
 gem 'bitters'
 # sass mixins
@@ -25,7 +24,7 @@ gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
-#CI integration
+# CI integration
 # gem 'travis'
 
 # Turbolinks makes following links in your web application faster.
