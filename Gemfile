@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 # styles and structure for bourbon
 gem 'bitters'
 # sass mixins
@@ -38,9 +39,11 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'rails_layout'
   gem 'spring'
   gem 'sqlite3'
-  gem 'rails_layout'
 end
 
 group :test do
