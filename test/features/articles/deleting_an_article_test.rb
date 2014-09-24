@@ -3,7 +3,7 @@ require 'test_helper'
 feature 'Deleting an article' do
   scenario 'article is clicked for delete' do
     # Given an article
-    article = Article.last
+    article = articles(:aardvark)
     body = article.body
     visit articles_path(article)
 

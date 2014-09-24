@@ -39,12 +39,13 @@ gem 'sass-rails', '~> 4.0.3'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'sqlite3', groups: [:development, :test]
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails_layout'
   gem 'spring'
-  gem 'sqlite3'
 end
 
 group :test do
@@ -53,7 +54,6 @@ group :test do
   # linting
   gem 'rubocop'
   gem 'minitest-rails'
-  gem 'sqlite3'
 end
 
 group :production do
