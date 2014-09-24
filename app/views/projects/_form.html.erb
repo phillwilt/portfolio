@@ -25,6 +25,14 @@
     <%= f.text_field :technologies %>
   </div>
 
+  <div class="field">
+    <%= f.label :image_url %>
+    <div class="form-error">
+      <%= @project.errors[:image_url][0] %>
+    </div>
+    <%= f.text_field :image_url %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -3,7 +3,7 @@
 Portfolio Site
 ============
 
-Basic setup of a Rails site with a welcome controller and tests.
+A blog and project portfolio site based in Ruby on Rails, Bourbon + Bitters + Neat + Refills done with BDD/TDD and Agile development.
 
 Contributors:
 
