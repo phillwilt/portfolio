@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
   def new
     @project = Project.new
   end
@@ -20,22 +21,24 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
   end
 
   def edit
-    @project = Project.find(params[:id])
   end
 
   def update
     if @project.update(project_params)
-      flash[:notice] = "#{@project.name} was successfully updated"
+      redirect_to @project, notice: "#{@project.name} was successfully updated"
     else
       render :edit
     end
   end
 
   private
+
+  def set_project
+    @project = Project.find(params[:id])
+  end
 
   def project_params
     params.require(:project).permit(:name, :technologies)
