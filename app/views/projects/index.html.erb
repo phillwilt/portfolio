@@ -6,12 +6,7 @@
       <h3><%= project.name %></h3>
       <p>Technologies Used: <%= project.technologies %></p>
       <%= link_to 'Show', project %> |
-      <%= link_to 'Edit', edit_project_path(project) %> |
-      <%= link_to 'Delete',
-                  project,
-                  method: :delete,
-                  data: {confirm: 'Are you sure?'}
-      %>
+      <%= link_to 'Edit', edit_project_path(project) %>
     </li>
   <% end %>
 </ul>
