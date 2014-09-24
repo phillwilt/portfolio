@@ -15,7 +15,7 @@ feature 'Creating a project' do
 
     click_on 'Create Project'
 
-    page.text.must_include 'Project was successfully created'
+    page.text.must_include "#{projects(:codefellows).name} was successfully created"
     page.text.must_include projects(:codefellows).name
   end
 
