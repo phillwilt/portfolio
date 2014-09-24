@@ -1,11 +1,6 @@
 require 'test_helper'
 
-feature 'Creating a project' do
-
-  scenario 'index the projects' do
-    visit projects_path
-    page.text.must_include projects(:codefellows).name
-  end
+feature 'Projects' do
 
   scenario 'create a new project'  do
     visit new_project_path
@@ -30,9 +25,6 @@ feature 'Creating a project' do
 
     page.text.must_include 'too short'
     page.text.must_include "can't be blank"
-  end
-
-  scenario 'edit a project' do
   end
 
   scenario 'delete a project' do

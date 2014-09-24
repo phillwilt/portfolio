@@ -23,6 +23,18 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    if @project.update(project_params)
+      flash[:notice] = "#{@project.name} was successfully updated"
+    else
+      render :edit
+    end
+  end
+
   private
 
   def project_params

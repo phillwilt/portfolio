@@ -12,6 +12,10 @@ codefellows:
   name: 'Portfolio'
   technologies: 'RoR, Ruby, HTML5, Etc'
 
+philwilt:
+  name: 'Phil Wilt'
+  technologies: 'The best'
+
 invalid:
   name: 'hi'
   technologies: ''
