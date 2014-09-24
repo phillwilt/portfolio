@@ -53,6 +53,7 @@ group :test do
   # linting
   gem 'rubocop'
   gem 'minitest-rails'
+  gem 'sqlite3'
 end
 
 group :production do
