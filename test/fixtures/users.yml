@@ -11,3 +11,7 @@ one:
 two:
   email: 'whodafihdhf@cares.com'
 #  column: value
+
+me:
+  email: 'me@here.com'
+  encrypted_password: <%= User.new.send(:password_digest, '12345678') %>
