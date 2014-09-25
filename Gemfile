@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # styles and structure for bourbon
 gem 'bitters'
 # sass mixins
@@ -25,7 +24,9 @@ gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
-#CI integration
+gem 'rake'
+
+# CI integration
 # gem 'travis'
 
 # Turbolinks makes following links in your web application faster.
@@ -38,12 +39,14 @@ gem 'sass-rails', '~> 4.0.3'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+gem 'sqlite3', groups: [:development, :test]
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'launchy'
   gem 'rails_layout'
   gem 'spring'
-  gem 'sqlite3'
 end
 
 group :test do

@@ -1,0 +1,40 @@
+<% if @project.errors.any? %>
+  <div class="form-flash-error">
+    <h5>
+      <%= pluralize(@project.errors.count, "error") %>
+      prevented this article from being saved:
+    </h5>
+  <% end %>
+</div>
+
+<%= form_for(@project) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <div class="form-error">
+      <%= @project.errors[:name][0] %>
+    </div>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :technologies %>
+    <div class="form-error">
+      <%= @project.errors[:technologies][0] %>
+    </div>
+    <%= f.text_field :technologies %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url %>
+    <div class="form-error">
+      <%= @project.errors[:image_url][0] %>
+    </div>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

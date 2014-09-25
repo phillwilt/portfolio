@@ -1,3 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  technologies: MyString
+
+two:
+  name: MyString
+  technologies: MyString
+
 codefellows:
-  name: 'Codefellows Portfolio'
-  technologies: 'Ruby on Rails, HTML5, SCSS, JQuery'
+  name: 'Portfolio'
+  technologies: 'RoR, Ruby, HTML5, Etc'
+
+philwilt:
+  name: 'Phil Wilt'
+  technologies: 'The best'
+
+invalid:
+  name: 'hi'
+  technologies: ''

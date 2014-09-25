@@ -5,3 +5,5 @@ deploy:
   app: philwilt
   on:
     repo: phillwilt/portfolio
+
+bundler_args: --without development
