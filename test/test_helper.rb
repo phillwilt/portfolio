@@ -11,8 +11,8 @@ require 'minitest/pride'
 # to the test group in the Gemfile and uncomment the following:
 require 'minitest/rails/capybara'
 
-# Uncomment for awesome colorful output
-# require 'minitest/pride'
+require 'coveralls'
+Coveralls.wear!
 
 module ActiveSupport
   class TestCase
