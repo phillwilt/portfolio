@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/phillwilt/portfolio.svg?branch=master)](https://travis-ci.org/phillwilt/portfolio)
-
 [ ![Codeship Status for phillwilt/portfolio](https://www.codeship.io/projects/4c676140-2642-0132-40e6-7aa7d9a033ce/status)](https://www.codeship.io/projects/37415)
+[![Coverage Status](https://coveralls.io/repos/phillwilt/portfolio/badge.png)](https://coveralls.io/r/phillwilt/portfolio)
 
 Portfolio Site
 ============

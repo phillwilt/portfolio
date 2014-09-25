@@ -5,6 +5,10 @@ gem 'bitters'
 # sass mixins
 gem 'bourbon'
 
+# Test Coverage
+gem 'coveralls', require: false
+
+# Authentication
 gem 'devise'
 
 # grid framework for bourbon
