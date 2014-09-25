@@ -1,8 +1,10 @@
 require 'test_helper'
 
 feature 'Creating an article' do
-  scenario 'submit a form for a new article' do
-    # Given I have created an article
+  scenario 'site owner creates an article' do
+
+    sign_in
+
     visit new_article_path
 
     fill_in 'Title', with: articles(:aardvark).title
@@ -15,5 +17,7 @@ feature 'Creating an article' do
     page.text.must_include 'Article was successfully created'
     page.text.must_include articles(:aardvark).body
 
+    page.has_css? '#author'
+    page.text.must_include users(:me).email
   end
 end

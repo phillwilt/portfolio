@@ -2,6 +2,7 @@ require 'test_helper'
 
 feature 'Editing an article' do
   scenario 'when I edit an article' do
+    sign_in
     # Given a form to edit an article
     visit article_path(articles(:aardvark))
 
