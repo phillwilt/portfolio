@@ -5,6 +5,8 @@ gem 'bitters'
 # sass mixins
 gem 'bourbon'
 
+gem 'devise'
+
 # grid framework for bourbon
 gem 'neat'
 # Spring speeds up development by keeping your application running in the
