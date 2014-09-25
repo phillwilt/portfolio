@@ -5,8 +5,14 @@ gem 'bitters'
 # sass mixins
 gem 'bourbon'
 
+gem 'devise'
+
 # grid framework for bourbon
 gem 'neat'
+
+# application monitoring
+gem 'newrelic_rpm'
+
 # Spring speeds up development by keeping your application running in the
 # background. Read more: https://github.com/rails/spring
 # patterns for bourbon

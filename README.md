@@ -5,9 +5,11 @@
 Portfolio Site
 ============
 
-A blog and project portfolio site based in Ruby on Rails, Bourbon + Bitters + Neat + Refills done with BDD/TDD and Agile development.
+A blog and project portfolio site based in Ruby on Rails, Bourbon + Bitters + Neat + Refills done with BDD/TDD and Agile development. Authentication with Devise. Monitoring with New Relic, Deployment via travisCI, Code Ship and Heroku.
 
 Contributors:
+
+- Andrew Sinner
 
 - Sunny Mittal
 
