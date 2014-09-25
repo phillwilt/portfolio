@@ -25,16 +25,11 @@ class ArticlesController < ApplicationController
   # POST /articles
   def create
     @article = Article.new(article_params)
-
-    respond_to do |format|
-      if @article.save
-        current_user.articles << @article
-        format.html do
-          redirect_to @article, notice: 'Article was successfully created.'
-        end
-      else
-        format.html { render :new }
-      end
+    if @article.save
+      current_user.articles << @article
+      redirect_to @article, notice: 'Article was successfully created.'
+    else
+      render :new
     end
   end
 

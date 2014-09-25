@@ -10,3 +10,5 @@ AllCops:
     - db/schema.rb
     - vendor/**/*
     - bin/**/*
+    - config/initializers/**/*
+    - db/migrate/*devise*.rb
