@@ -1,3 +1,7 @@
+require 'simplecov'
+SimpleCov.start 'rails'
+require 'coveralls'
+Coveralls.wear!
 Rails.env = 'test'
 
 puts "Current Environment: #{Rails.env}"
@@ -11,8 +15,7 @@ require 'minitest/pride'
 # to the test group in the Gemfile and uncomment the following:
 require 'minitest/rails/capybara'
 
-require 'coveralls'
-Coveralls.wear!
+
 
 module ActiveSupport
   class TestCase
@@ -28,9 +31,9 @@ module ActiveSupport
   end
 end
 
-def sign_in
+def sign_in(role)
   visit new_user_session_path
-  fill_in 'Email', with: users(:me).email
+  fill_in 'Email', with: users(role).email
   fill_in 'Password', with: '12345678'
   click_on 'Log in'
 end

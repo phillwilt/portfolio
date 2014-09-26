@@ -2,6 +2,7 @@ require 'test_helper'
 
 feature 'Deleting an article' do
   scenario 'article is clicked for delete' do
+    sign_in(:editor)
     # Given an article
     article = articles(:aardvark)
     body = article.body

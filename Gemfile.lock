@@ -123,6 +123,8 @@ GEM
       slop (~> 3.4, >= 3.4.5)
     pg (0.17.1)
     powerpack (0.0.9)
+    pundit (0.3.0)
+      activesupport (>= 3.0.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -229,6 +231,7 @@ DEPENDENCIES
   neat
   newrelic_rpm
   pg
+  pundit
   rails (= 4.1.6)
   rails_12factor
   rails_layout
@@ -237,6 +240,7 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  simplecov
   spring
   sqlite3
   thin

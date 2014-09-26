@@ -17,12 +17,17 @@
         <td><%= article.author.email %></td>
         <td><%= article.body %></td>
         <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+        <td>
+          <% if policy(Article).update? %>
+            <%= link_to 'Edit', edit_article_path(article) %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Article', new_article_path %>
+<% if policy(Article).create? %>
+  <%= link_to 'New Article', new_article_path %>
+<% end %>

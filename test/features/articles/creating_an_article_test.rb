@@ -1,9 +1,9 @@
 require 'test_helper'
 
 feature 'Creating an article' do
-  scenario 'site owner creates an article' do
+  scenario 'author creates an article' do
 
-    sign_in
+    sign_in(:author)
 
     visit new_article_path
 
@@ -18,6 +18,17 @@ feature 'Creating an article' do
     page.text.must_include articles(:aardvark).body
 
     page.has_css? '#author'
-    page.text.must_include users(:me).email
+    page.text.must_include users(:author).email
+    page.text.must_include 'Status: Unpublished'
+  end
+
+  scenario 'unauthorized site visitor cannot create an article' do
+    visit new_article_path
+    page.text.must_include 'You need to sign in'
+  end
+
+  scenario 'unauthorized visitor cannot see new article button' do
+    visit articles_path
+    page.wont_have_link 'New Article'
   end
 end
