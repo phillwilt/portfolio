@@ -2,7 +2,7 @@ class ApplicationPolicy
   attr_reader :user, :record
 
   class NullUser
-    def method_missing(m, *args, &block)
+    def method_missing(*)
       false
     end
   end
@@ -17,7 +17,7 @@ class ApplicationPolicy
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    scope.where(id: record.id).exists?
   end
 
   def create?

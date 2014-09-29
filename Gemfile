@@ -66,7 +66,7 @@ group :test do
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
   gem 'rubocop'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
 
 end
 

@@ -15,8 +15,6 @@ require 'minitest/pride'
 # to the test group in the Gemfile and uncomment the following:
 require 'minitest/rails/capybara'
 
-
-
 module ActiveSupport
   class TestCase
     ActiveRecord::Migration.check_pending!
