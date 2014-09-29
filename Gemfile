@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Authorization
+gem 'pundit'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
@@ -60,11 +63,11 @@ group :development do
 end
 
 group :test do
-  gem 'minitest-rails-capybara'
-  # gem 'turn'
-  # linting
-  gem 'rubocop'
   gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'rubocop'
+  gem 'simplecov', require: false
+
 end
 
 group :production do

@@ -1,9 +1,11 @@
 aardvark:
   title: 'An aardvark article'
-  author: me
+  author: author
   body: 'Too many aardvarks'
+  published: true
 
 ant:
   title: 'An ant article'
-  author: me
+  author: author
   body: 'Too few ants'
+  published: true
