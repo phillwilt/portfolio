@@ -2,15 +2,10 @@ class ArticlePolicy < ApplicationPolicy
   class Scope < Scope
     attr_reader :user, :scope
 
-    def initalize(user, scope)
-      @user = user
-      @scope = scope
-    end
-
     def resolve
-      if @user && @user.author?
+      if @user.author?
         scope.where(author_id: @user.id)
-      elsif @user && @user.editor?
+      elsif @user.editor?
         scope.all
       else
         scope.where(published: true)
@@ -19,23 +14,23 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def new?
-    @user.editor? || @user.author? if @user
+    @user.editor? || @user.author?
   end
 
   def create?
-    @user.author? if @user
+    @user.author?
   end
 
   def edit?
-    @user.editor? || @user.author? if @user
+    @user.editor? || @user.author?
   end
 
   def publish?
-    @user.editor? if @user
+    @user.editor?
   end
 
   def destroy?
-    user.editor? if @user
+    user.editor?
   end
 
   def permitted_attributes
