@@ -1,0 +1,26 @@
+= form_for([@article, @comment]) do |f|
+  - if @comment.errors.any?
+    #error_explaination
+      %h2= pluralize(@comment.errors.count, 'error')
+    %ul
+      - @comment.errors.full_message.each do |message|
+        %li= message
+
+  .field
+    = f.label :author
+    = f.text_field :author
+
+  .field
+    = f.label :author_email
+    = f.text_field :author_email
+
+  .field
+    = f.label :author_url
+    = f.text_field :author_url
+
+  .field
+    = f.label :content
+    = f.text_field :content
+
+  .actions
+    = f.submit

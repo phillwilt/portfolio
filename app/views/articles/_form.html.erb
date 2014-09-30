@@ -1,9 +1,8 @@
-
-  <% if @article.errors.any? %>
-    <div id="form-flash-error">
-      <h5 class="error-heading">Uh oh! Please fix errors:</h5>
-      </div>
-  <% end %>
+<% if @article.errors.any? %>
+  <div id="form-flash-error">
+    <h5 class="error-heading">Uh oh! Please fix errors:</h5>
+    </div>
+<% end %>
 
 <%= form_for(@article) do |f| %>
   <div class="field">

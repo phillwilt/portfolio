@@ -11,6 +11,9 @@ gem 'coveralls', require: false
 # Authentication
 gem 'devise'
 
+gem 'haml'
+gem 'haml-rails'
+
 # grid framework for bourbon
 gem 'neat'
 
@@ -60,6 +63,7 @@ group :development do
   gem 'launchy'
   gem 'rails_layout'
   gem 'spring'
+  gem 'pry'
 end
 
 group :test do
