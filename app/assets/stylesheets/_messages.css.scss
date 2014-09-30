@@ -22,16 +22,22 @@
   border-radius: .5rem;
 }
 
-.form-flash-error {
-  @extend %error;
+#form-flash-error {
+  @extend %flash-ext;
   background: $error-color;
+  .error-heading {
+    margin: 0.5rem;
+  }
 }
 
 .form-error {
   @extend %error;
+  @extend %flash-ext;
+  @include pad(0.2rem 0.5rem);
+
   background: $error-color;
 }
-.field_with_errors {
-  @extend %error;
-  background: $error-color;
-}
+// .field_with_errors {
+//   @extend %error;
+//   background: $error-color;
+// }
