@@ -24,7 +24,12 @@ label {
   abbr {
     display: none;
   }
+
+  &.label-check {
+    display: inline;
+  }
 }
+
 
 textarea,
 #{$all-text-inputs},
