@@ -4,6 +4,7 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: $base-font-weight;
   line-height: $base-line-height;
 }
 
@@ -15,8 +16,14 @@ h5,
 h6 {
   font-family: $header-font-family;
   line-height: $header-line-height;
-  margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  font-weight: $header-font-weight;
+}
+
+h1,
+h2 {
+  margin: 2px;
+  border-bottom: 2px dotted $dark-gray;
 }
 
 h1 {
@@ -91,3 +98,4 @@ cite {
     content: "\2014 \00A0";
   }
 }
+
