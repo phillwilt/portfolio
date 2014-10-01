@@ -20,6 +20,8 @@ gem 'neat'
 # application monitoring
 gem 'newrelic_rpm'
 
+gem 'omniauth-twitter'
+
 # Spring speeds up development by keeping your application running in the
 # background. Read more: https://github.com/rails/spring
 # patterns for bourbon

@@ -30,9 +30,9 @@ class CommentsController < ApplicationController
     @article = @comment.article
     if @comment.update_attributes(comment_params)
       if @comment.approved?
-        flash[:notice] = "Comment approved"
+        flash[:notice] = 'Comment approved'
       else
-        flash[:notice] = "Comment unapproved"
+        flash[:notice] = 'Comment unapproved'
       end
       redirect_to article_path(@article)
     else
