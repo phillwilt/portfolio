@@ -19,5 +19,3 @@
 
 # Ignore SimpleCov
 /coverage/*
-
-config/secrets.yml
