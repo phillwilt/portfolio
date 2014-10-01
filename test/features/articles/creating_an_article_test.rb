@@ -17,8 +17,6 @@ feature 'Creating an article' do
     page.text.must_include 'Article was successfully created'
     page.text.must_include articles(:aardvark).body
 
-    page.has_css? '#author'
-    page.text.must_include users(:author).email
     page.text.must_include 'Status: Unpublished'
   end
 

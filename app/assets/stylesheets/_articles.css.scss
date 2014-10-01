@@ -1,0 +1,74 @@
+.article {
+
+  .article-title-text {
+    border-bottom: 2px dotted $dark-gray;
+  }
+
+  .article-body {
+
+  }
+
+  @include span-columns(12 of 12);
+  tr {
+    @include row;
+  }
+  thead {
+    @include row;
+
+  }
+}
+
+.comment {
+  @include span-columns(8 of 12);
+  @include border-top-radius(5px);
+  @include border-bottom-radius(5px);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+  @include pad(1rem);
+
+  margin-bottom: 1rem;
+
+  hr {
+    margin: 2px;
+  }
+
+  background-color: darken(white, 5);
+
+}
+
+#comment-list {
+  @include span-columns(12 of 12);
+  margin-top: 2rem;
+}
+
+#new_comment {
+  @include span-columns(12 of 12);
+
+  .comment-inputs {
+    @include span-columns(6 of 12);
+  }
+
+  .field {
+    @include row;
+  }
+
+  label {
+    @include span-columns(3 of 12);
+    vertical-align: middle;
+  }
+
+  input,
+  textarea {
+    background-color: $light-gray;
+  }
+
+  input {
+    @include span-columns(9 of 12);
+  }
+
+  .actions input {
+      @include span-columns(10 of 12);
+      background-color: $seafoam-green;
+    }
+
+}

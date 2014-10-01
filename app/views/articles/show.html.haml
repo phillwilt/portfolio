@@ -1,0 +1,14 @@
+= render 'articles/article', article: @article
+.status
+
+%br
+
+#comment-list
+  - @comments.each do |comment|
+    .comment
+      = render 'comments/comment', comment: comment unless comment.new_record?
+
+%br
+
+= render 'comments/form'
+

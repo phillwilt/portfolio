@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  resources :comments
+
   devise_for :users
   resources :articles, :projects
+  resources :articles do
+    resources :comments
+  end
 
   get 'welcome/index'
 

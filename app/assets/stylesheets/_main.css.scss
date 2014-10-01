@@ -8,6 +8,12 @@ header {
 
 }
 
+button,
+input[type="submit"] {
+  background-color: $seafoam-green;
+}
+
+
 main {
   @include outer-container;
 
@@ -67,5 +73,15 @@ main {
       @include span-columns(12 of 12);
     }
   }
+}
+
+.button {
+  @extend %button;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: $seafoam-green;
 }
 
