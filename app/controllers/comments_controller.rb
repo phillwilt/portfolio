@@ -1,12 +1,13 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show]
+  before_action :set_comment, only: [:show, :update]
   before_action :authenticate_user!, only: [:update]
 
   def show
   end
 
   def index
-    @comments = policy_scope(Comment)
+    @article = Article.find(params[:article_id])
+    @comments = policy_scope(@article.comments)
   end
 
   def new
@@ -14,8 +15,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
-    @comment[:article_id] = params[:article_id]
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.build(comment_params)
+
     if @comment.save
       redirect_to article_path(@comment.article_id)
       flash[:notice] = 'Comment pending approval'
@@ -25,6 +27,20 @@ class CommentsController < ApplicationController
   end
 
   def update
+    @article = @comment.article
+    if @comment.update_attributes(comment_params)
+      if @comment.approved?
+        flash[:notice] = "Comment approved"
+      else
+        flash[:notice] = "Comment unapproved"
+      end
+      redirect_to article_path(@article)
+    else
+      render 'articles/article'
+    end
+  end
+
+  def destroy
   end
 
   private

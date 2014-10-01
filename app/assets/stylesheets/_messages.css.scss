@@ -33,7 +33,7 @@
 .form-error {
   @extend %error;
   @extend %flash-ext;
-  @include pad(0.2rem 0.5rem);
+
 
   background: $error-color;
 }

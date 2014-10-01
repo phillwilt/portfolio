@@ -1,20 +1,14 @@
-%p
-  %strong Title:
-  = @article.title
-%p#author
-  %b By:
-  = @article.author.email
-%p
-  %strong Body:
-  = @article.body
+= render 'articles/article', article: @article
 .status
-  %b Status:
-  = @article.published? ? 'Published' : 'Unpublished'
-- if policy(@article).edit?
-  = link_to 'Edit', edit_article_path(@article)
-  |
-- if policy(@article).destroy?
-  = link_to 'Destroy', @article, method: :delete
+
+%br
+
+#comment-list
+  - @comments.each do |comment|
+    .comment
+      = render 'comments/comment', comment: comment unless comment.new_record?
+
+%br
+
 = render 'comments/form'
-= link_to 'Back', articles_path
 

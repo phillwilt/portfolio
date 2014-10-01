@@ -1,0 +1,9 @@
+%h1 Thoughts
+
+<br />
+
+- if policy(Article).new?
+  = link_to 'New Thought', new_article_path, class: 'button'
+
+- @articles.reverse.each do |article|
+  = render 'articles/article', article: article

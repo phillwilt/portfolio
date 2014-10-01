@@ -9,8 +9,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
-    @comment = Comment.new(article_id: @article.id)
-    @comments = policy_scope(Comment)
+    @comment = @article.comments.build
+    @comments = policy_scope(@article.comments)
   end
 
   # GET /articles/new

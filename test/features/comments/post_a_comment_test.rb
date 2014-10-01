@@ -6,19 +6,19 @@ feature 'Posting an article comment' do
 
     fill_in 'Content', with: comments(:ants).content
     fill_in 'Author', with: comments(:ants).author
-    fill_in 'Author url', with: comments(:ants).author_url
-    fill_in 'Author email', with: comments(:ants).author_email
+    fill_in 'Website', with: comments(:ants).author_url
+    fill_in 'Email', with: comments(:ants).author_email
     click_on 'Create Comment'
     page.text.must_include 'Comment pending approval'
   end
 
   scenario 'as a visitor when I post a comment I wont see it until approved' do
-    visit articles_path(articles(:aardvark))
+    visit article_path(articles(:aardvark))
 
-    fill_in 'Content', with: comments(:ants)
+    fill_in 'Content', with: comments(:ants).content
     click_on 'Create Comment'
 
-    page.text.wont_include comments(:ants)
+    page.text.wont_include comments(:ants).content
   end
 
 end
