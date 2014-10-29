@@ -3,7 +3,8 @@
 <br />
 
 - if policy(Article).new?
-  = link_to 'New Thought', new_article_path, class: 'button'
+  = link_to 'New Thought', new_article_path, remote: true, class: 'button', id: "new-article-link"
 
-- @articles.reverse.each do |article|
-  = render 'articles/article', article: article
+#articles
+  - @articles.reverse.each do |article|
+    = render 'articles/article', article: article

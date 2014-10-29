@@ -28,13 +28,9 @@ class CommentsController < ApplicationController
 
   def update
     @article = @comment.article
-    if @comment.update_attributes(comment_params)
-      if @comment.approved?
-        flash[:notice] = 'Comment approved'
-      else
-        flash[:notice] = 'Comment unapproved'
-      end
-      redirect_to article_path(@article)
+    if @comment.update(comment_params)
+      redirect_to article_path(@article),
+        notice: "Comment #{'un' if !@comment.approved?}approved"
     else
       render 'articles/article'
     end

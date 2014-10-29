@@ -4,7 +4,7 @@
     </div>
 <% end %>
 
-<%= form_for(@article) do |f| %>
+<%= form_for @article, remote: true do |f| %>
   <div class="field">
     <%= f.label :title %>
     <div class="form-error">

@@ -1,0 +1,3 @@
+$("#edit_article_#{@article.id}").remove();
+$("#article-#{@article.id}").remove();
+$('#articles').prepend("#{ j render 'articles/article', article: @article } ");
