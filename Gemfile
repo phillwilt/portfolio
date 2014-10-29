@@ -73,7 +73,6 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'rubocop'
   gem 'simplecov', require: false
-
 end
 
 group :production do

@@ -13,7 +13,6 @@
 
 .comment-controls
   - if policy(comment).approval?
-    - #pry
     - if comment.approved?
       = link_to 'Unapprove', article_comment_path(@article, comment, params: { comment: { approved: false }}), method: :patch, class: 'button'
 

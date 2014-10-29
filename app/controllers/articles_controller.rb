@@ -20,32 +20,45 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    respond_to do |format|
+      format.html { render :edit }
+      format.js
+    end
   end
 
   # POST /articles
   def create
     @article = Article.new(article_params)
-    if @article.save
-      current_user.articles << @article
-      redirect_to @article, notice: 'Article was successfully created.'
-    else
-      render :new
+    respond_to do |format|
+      if @article.save
+        current_user.articles << @article
+        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.js
+      else
+        format.html { render :new }
+      end
     end
   end
 
   # PATCH/PUT /articles/1
   def update
-    if @article.update(article_params)
-      redirect_to @article, notice: 'Article was successfully updated.'
-    else
-      render :edit
+    respond_to do |format|
+      if @article.update(article_params)
+        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.js
+      else
+       format.html { render :edit }
+     end
     end
   end
 
   # DELETE /articles/1
   def destroy
-    @article.destroy
-    redirect_to articles_url, notice: 'Article was successfully destroyed.'
+    respond_to do |format|
+      @article.destroy
+      format.html { redirect_to articles_url, notice: 'Article was successfully destroyed.' }
+      format.js
+    end
   end
 
   private
